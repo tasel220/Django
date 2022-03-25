@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-    {% block content %}
+{% block content %}
     <h1>new post</h1>
     <form action="{% url 'blogPosts:index' %}" method="POST">
         {% comment %} 위의 경로는 action="/posts/"과 같습니다 {% endcomment %}
@@ -10,3 +10,4 @@
         <textarea name="content" rows="30" cols="50"></textarea> <br />
         <input type="submit" value="submit" />
     </form>
+{% endblock content %}

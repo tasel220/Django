@@ -7,7 +7,17 @@
         {% load sass_tags %}
         <link rel="stylesheet" type="text/css" href="{% sass_src 'blogPosts/scss/style.scss' %}">
     </head>
-    <header>Snulion Blog</header> {% comment %} header를 작성해줍니다 {% endcomment %}
+    <header>
+        <div style="text-align: right;">
+            {% if user.is_authenticated %}
+                {{ user.get_username }}님, 안녕하세요
+            {% else %}
+                <a href="{% url 'signup' %}">회원가입</a> 
+                <a href="{% url 'login' %}">로그인</a>
+            {% endif %}
+        </div>
+        Snulion Blog
+    </header> {% comment %} header를 작성해줍니다 {% endcomment %}
     <body>
         {% block content %}
         {% endblock %}
