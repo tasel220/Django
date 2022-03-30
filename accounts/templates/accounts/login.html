@@ -1,7 +1,8 @@
 <h1>로그인</h1>
+
 <form method="POST" action="{% url 'login' %}">
     {% csrf_token %}
-    {% comment %} <p>
+    <p>
         사용자 이름:
         <input type="text" name="username" value="">
     </p>
@@ -9,7 +10,14 @@
         비밀번호:
         <input type="password" name="password" value="">
     </p>
-    <input type="submit" value="로그인" /> {% endcomment %}
-    {{ form.as_p }}
     <input type="submit" value="로그인" />
 </form>
+
+
+<!-- <h1>로그인</h1>
+<form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="로그인" />
+</form> -->
+
