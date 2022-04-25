@@ -11,6 +11,9 @@
         <div style="text-align: right;">
             {% if user.is_authenticated %}
                 {{ user.get_username }}님, 안녕하세요
+                <div>
+                    내가 좋아한 글 : {{ user.like_posts.count }}개
+                </div>
                 <a href="{% url 'logout' %}">로그아웃</a>
             {% else %}
                 <a href="{% url 'signup' %}">회원가입</a> 

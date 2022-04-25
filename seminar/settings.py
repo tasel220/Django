@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'sass_processor',
     'blogPosts.apps.BlogpostsConfig',
     'accounts.apps.AccountsConfig',
+    'tags.apps.TagsConfig',
 ]
 
 MIDDLEWARE = [
